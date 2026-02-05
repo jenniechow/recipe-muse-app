@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pantry Muse — Cook With What You Have</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="logo">Pantry Muse</div>
+        <div class="nav-links">
+          <button class="ghost" data-scroll="pantry">My Pantry</button>
+          <button class="ghost" data-scroll="recipes">Tonight</button>
+          <button class="ghost" data-scroll="plan">This Week</button>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">Cook with what you already own</p>
+          <h1>Your fridge is a playlist.</h1>
+          <p class="lede">
+            Check a few pantry staples, and Pantry Muse improvises recipes that
+            fit your vibe. You don’t need everything—just enough to start.
+          </p>
+          <div class="hero-actions">
+            <button class="primary" data-scroll="pantry">Start Checking</button>
+            <button class="secondary" data-scroll="recipes">See Tonight’s Picks</button>
+          </div>
+          <div class="stat-row">
+            <div>
+              <span class="stat">120+</span>
+              <span class="stat-label">starter pantry items</span>
+            </div>
+            <div>
+              <span class="stat">3–5</span>
+              <span class="stat-label">fresh suggestions nightly</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-panel" aria-hidden="true">
+          <div class="panel-card">
+            <div class="panel-tag">Tonight’s mood</div>
+            <h3>Charred Tomato Pasta</h3>
+            <p>Match: 67% • Pantry‑first • 25 min</p>
+            <div class="panel-ingredients">
+              <span>pasta</span>
+              <span>olive oil</span>
+              <span>garlic</span>
+              <span>canned tomatoes</span>
+              <span>basil</span>
+            </div>
+          </div>
+          <div class="panel-card outline">
+            <div class="panel-tag">Pantry muse</div>
+            <h3>Upgrade a can</h3>
+            <p>Beans + lemon + herbs = a weeknight bowl.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="pantry" class="section pantry" data-state="open">
+        <div class="section-head pantry-head">
+          <div>
+            <h2>Quick Pantry Check</h2>
+            <p>
+              Tap everything you have. We’ll build ideas around your real pantry
+              —not a fantasy list.
+            </p>
+          </div>
+          <button class="ghost" id="toggle-pantry" aria-expanded="true">
+            Minimize
+          </button>
+        </div>
+
+        <div class="pantry-summary" id="pantry-summary">
+          <div>
+            Pantry saved with <span id="pantry-count-summary">0</span> items.
+          </div>
+          <button class="secondary" id="edit-pantry">Edit Checklist</button>
+        </div>
+
+        <div class="pantry-body">
+          <div class="pantry-controls">
+            <input
+              id="pantry-search"
+              type="search"
+              placeholder="Search pantry items"
+              aria-label="Search pantry items"
+            />
+            <div class="control-buttons">
+              <button class="ghost" id="clear-pantry">Clear</button>
+              <button class="secondary" id="save-pantry">Save Pantry</button>
+            </div>
+          </div>
+
+          <div class="pantry-grid" id="pantry-grid"></div>
+
+          <div class="pantry-footer">
+            <div class="pantry-count">
+              <span id="pantry-count">0</span> items checked
+            </div>
+            <button class="primary" id="generate">Refresh Suggestions</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="recipes" class="section recipes">
+        <div class="section-head">
+          <h2>Tonight’s Pantry‑First Picks</h2>
+          <p>
+            These recipes are inspired by what you have. Missing one or two
+            items? We’ll suggest swaps. Showing picks at 60% match or higher.
+          </p>
+        </div>
+        <div class="recipe-carousel">
+          <button class="ghost" id="prev-recipe" aria-label="Previous recipe">
+            ◀
+          </button>
+          <div class="recipe-track" id="recipe-grid"></div>
+          <button class="ghost" id="next-recipe" aria-label="Next recipe">
+            ▶
+          </button>
+        </div>
+      </section>
+
+      <section id="plan" class="section plan">
+        <div class="section-head">
+          <h2>Cookbook for the Week</h2>
+          <p>
+            Mix quick wins with one “stretch” recipe that uses up odds and ends.
+          </p>
+        </div>
+        <div class="plan-grid" id="plan-grid"></div>
+      </section>
+
+      <section class="section cta">
+        <div class="cta-card">
+          <h2>Make your pantry a habit.</h2>
+          <p>
+            Save staples, scan receipts later, or just check off the classics—
+            the muse learns your kitchen over time.
+          </p>
+          <div class="hero-actions">
+            <button class="primary">Create Free Account</button>
+            <button class="ghost">Learn How It Works</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <div class="logo">Pantry Muse</div>
+        <p>Cook with what you have. Waste less. Eat better.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Recipes</a>
+        <a href="#">Pantry</a>
+        <a href="#">Guides</a>
+        <a href="#">Contact</a>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
