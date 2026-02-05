@@ -359,6 +359,13 @@ button:hover {
   display: grid;
   gap: 12px;
   border: 1px solid rgba(29, 26, 22, 0.05);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 35px rgba(29, 26, 22, 0.2);
 }
 
 .recipe-title {
@@ -457,6 +464,206 @@ button:hover {
 .footer-links {
   display: flex;
   gap: 16px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 10;
+}
+
+.modal.is-open {
+  display: flex;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 14, 11, 0.6);
+}
+
+.modal-card {
+  position: relative;
+  background: #fff;
+  border-radius: 24px;
+  padding: 32px;
+  max-width: 720px;
+  width: min(92vw, 720px);
+  max-height: 86vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow);
+  z-index: 1;
+}
+
+.modal-card.nyt-layout {
+  max-width: 980px;
+  width: min(94vw, 980px);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: rgba(29, 26, 22, 0.08);
+}
+
+.modal-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin: 8px 0 4px;
+}
+
+.modal-body {
+  margin-top: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+.modal-body h3 {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+}
+
+.modal-ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.modal-ingredients span {
+  background: rgba(47, 122, 91, 0.15);
+  color: var(--leaf);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.modal-footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.nyt-hero {
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) minmax(280px, 1.2fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.nyt-copy h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  margin: 12px 0;
+}
+
+.nyt-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.nyt-byline {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.nyt-meta {
+  display: grid;
+  gap: 6px;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.nyt-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nyt-image-wrap {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #f0e6da;
+  box-shadow: var(--shadow);
+}
+
+.nyt-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 260px;
+}
+
+.nyt-columns {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(260px, 2fr);
+  gap: 36px;
+  margin-top: 32px;
+  border-top: 1px solid rgba(29, 26, 22, 0.1);
+  padding-top: 28px;
+}
+
+.nyt-columns h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.nyt-yield {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.nyt-list,
+.nyt-steps {
+  display: grid;
+  gap: 12px;
+  padding-left: 18px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.nyt-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.nyt-list li {
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(29, 26, 22, 0.08);
+}
+
+.nyt-steps li strong {
+  display: inline-block;
+  margin-right: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+}
+
+@media (max-width: 900px) {
+  .nyt-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .nyt-columns {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {

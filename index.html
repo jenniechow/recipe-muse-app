@@ -166,6 +166,40 @@
       </div>
     </footer>
 
+    <div class="modal" id="recipe-modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-card nyt-layout" role="document">
+        <button class="modal-close" id="close-modal" aria-label="Close">✕</button>
+        <div class="nyt-hero">
+          <div class="nyt-copy">
+            <p class="nyt-eyebrow" id="modal-mood">Pantry Muse</p>
+            <h2 id="modal-title">Recipe</h2>
+            <p class="nyt-byline" id="modal-byline">Recipe from Pantry Muse</p>
+            <div class="nyt-meta" id="modal-meta"></div>
+            <div class="nyt-actions">
+              <button class="primary">Save</button>
+              <button class="ghost">Share</button>
+            </div>
+          </div>
+          <div class="nyt-image-wrap">
+            <img id="modal-image" alt="Recipe photo" />
+          </div>
+        </div>
+        <div class="nyt-columns">
+          <div>
+            <h3>Ingredients</h3>
+            <p class="nyt-yield" id="modal-yield"></p>
+            <ul class="nyt-list" id="modal-ingredients"></ul>
+          </div>
+          <div>
+            <h3>Preparation</h3>
+            <ol class="nyt-steps" id="modal-instructions"></ol>
+          </div>
+        </div>
+        <div class="modal-footer" id="modal-source"></div>
+      </div>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
